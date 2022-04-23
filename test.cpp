@@ -12,10 +12,7 @@ int main(){
     }
 
     vector<int> same_num(26, 0);
-    for(int i=0; i<N; i++){
-        for(int j=i+1; j<N; j++){
-        }
-    }
+    
 
 
 }
