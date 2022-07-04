@@ -1,26 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-void second_sort(vector<pair<int, int>> &p){
-    
-}
+#define rep(i, n) for(int i=0;i<(n);i++)
 
 int main(){
-    int N;
-    cin >> N;
+    int n;
+    cin >> n;
 
-    vector<pair<int ,int>> p;
-    for(int i=0;i<N;i++){
-        int a,b;
-        cin >> a >> b;
-        p.push_back(make_pair(a, b));
+    vector<pair<int, int>> p(n);
+
+    rep(i, n){
+        int a, b; 
+        cin >> a >> b; 
+        p.at(i) = make_pair(b, a);
     }
 
-    second_sort(p);
+    sort(p.begin(), p.end());
 
-    for(int i=0;i<N;i++){
-        cout <<p.at(i).first << " ";
-        cout << p.at(i).second << endl;
+    for(pair<int, int> p : p){
+        int a, b; 
+        tie(b, a ) = p;
+        cout << a << " " << b << endl;
     }
-
 }
